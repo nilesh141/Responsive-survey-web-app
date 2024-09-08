@@ -1,0 +1,191 @@
+/* survey.css */
+.survey {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('https://cdn.pixabay.com/photo/2018/01/04/00/19/vietnam-3059529_1280.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+    background: url('https://cdn.pixabay.com/photo/2018/01/04/00/19/vietnam-3059529_1280.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    height: 100vh;
+}
+
+.rating-options {
+    display: flex;
+    gap: 50px;
+    font-size: 15px;
+}
+
+.rating-options label {
+    display: flex;
+    align-items: center;
+    background-color: rgba(133, 131, 131, 0.508);
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.rating-options input[type="radio"] {
+    margin-right: 3px;
+}
+
+.survey h2 {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.953);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 2s forwards;
+}
+
+.navigation-buttons, .submit-button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.navigation-buttons button, .submit-button-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.navigation-buttons button:hover, .submit-button-container button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+button:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .survey h2 {
+        font-size: 1.5rem;
+    }
+
+    .navigation-buttons button, .submit-button-container button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .survey h2 {
+        font-size: 1.2rem;
+    }
+
+    .navigation-buttons button, .submit-button-container button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Styles for the Confirmation Dialog */
+body{
+    /* background-color: red; */
+   
+    /* background: url('https://cdn.pixabay.com/photo/2018/01/04/00/19/vietnam-3059529_1280.jpg') no-repeat center center/cover; */
+    /* backdrop-filter: blur(10px); */
+    background: url('https://cdn.pixabay.com/photo/2018/01/04/00/19/vietnam-3059529_1280.jpg') no-repeat center center/cover;
+    /* backdrop-filter: blur(10px); */
+    /* padding: 40px; */
+    background-size: calc(122.5%);
+    /* background-color: rgba(31, 101, 162, 0.248); */
+    
+}
+.confirmation-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 254, 254, 0);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+    margin: 0 auto;
+    background: url('https://cdn.pixabay.com/photo/2018/01/04/00/19/vietnam-3059529_1280.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(1px);
+    
+}
+
+.confirmation-dialog h3 {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.85);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.confirmation-dialog button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.confirmation-dialog button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .confirmation-dialog {
+        padding: 20px;
+    }
+
+    .confirmation-dialog h3 {
+        font-size: 1.2rem;
+    }
+
+    .confirmation-dialog button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .confirmation-dialog {
+        padding: 15px;
+    }
+
+    .confirmation-dialog h3 {
+        font-size: 1rem;
+    }
+
+    .confirmation-dialog button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}

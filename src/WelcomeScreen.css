@@ -1,0 +1,76 @@
+/* WelcomeScreen.css */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2018/01/04/00/19/vietnam-3059529_1280.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+}
+
+.welcome-screen h1 {
+    font-size: 3rem;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.953);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    opacity: 0; /* Start with hidden text */
+    transform: translateY(30px); /* Start with text moved down */
+    animation: fadeInUp 2s forwards; /* Apply the animation */
+}
+
+.welcome-screen button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.welcome-screen button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-screen h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome-screen button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-screen h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-screen button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
